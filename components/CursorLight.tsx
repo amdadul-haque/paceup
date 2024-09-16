@@ -23,7 +23,7 @@ const CursorLight: React.FC = () => {
   // Update light position based on mouse
   useFrame(() => {
     if (lightRef.current) {
-      const vector = new Vector3(mouse.x, mouse.y, 0.5).unproject(camera);
+      const vector = new Vector3(mouse.x, mouse.y, 0.85).unproject(camera);
       lightRef.current.position.lerp(vector, 0.1); // Smooth transition
     }
   });
@@ -34,7 +34,7 @@ const CursorLight: React.FC = () => {
         ref={lightRef}
         castShadow
         intensity={1}
-        distance={10}
+        distance={9999}
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
         shadow-bias={-0.0001}

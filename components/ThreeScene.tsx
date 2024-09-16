@@ -14,7 +14,7 @@ const ThreeScene: React.FC = () => {
         style={{ height: "100vh", backgroundColor: "#f9d4e3" }} // Light pink background
       >
         {/* Ambient Light */}
-        <ambientLight intensity={0.3} />
+        <ambientLight intensity={0.8} />
 
         {/* Cursor-Based Point Light */}
         <CursorLight />
@@ -25,7 +25,7 @@ const ThreeScene: React.FC = () => {
           position={[0, -1, 0]}
           receiveShadow
         >
-          <planeGeometry args={[10, 10]} />
+          <planeGeometry args={[1000, 1000]} />
           <shadowMaterial opacity={0.3} />
         </mesh>
 

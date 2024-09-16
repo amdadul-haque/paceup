@@ -14,14 +14,13 @@ type PaceUpProps = JSX.IntrinsicElements["group"];
 export function PaceUp(props: PaceUpProps) {
   const { nodes } = useGLTF("/model.glb") as GLTFResult;
 
-  // Change color to dark green to match the image
   const material = useMemo(
     () => new MeshStandardMaterial({ color: "#3d5c33" }),
     []
   );
 
   return (
-    <group {...props} dispose={null} rotation={[1, 1, 1]}>
+    <group {...props} dispose={null}>
       {Object.values(nodes).map((node, index) => {
         if (node instanceof Mesh) {
           return (
@@ -31,8 +30,9 @@ export function PaceUp(props: PaceUpProps) {
               receiveShadow
               geometry={node.geometry}
               material={material}
-              // Remove any rotation here if needed
-              scale={[1, 1, 1]} // Adjust scale if necessary
+              rotation={[Math.PI * 0.28, Math.PI * 0.21, Math.PI * -.23]} 
+              scale={[1, .5, 1]} 
+              
             />
           );
         }
