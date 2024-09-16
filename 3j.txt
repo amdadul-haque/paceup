@@ -1,0 +1,2 @@
+first create canvas(camera position)
+then use mesh under mesh boxGeometry(args), meshNormalMaterial
