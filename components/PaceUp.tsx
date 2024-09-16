@@ -30,9 +30,12 @@ export function PaceUp(props: PaceUpProps) {
               receiveShadow
               geometry={node.geometry}
               material={material}
+              // rotation={[0, 0, 0]} 
+              // rotation={[Math.PI / 4, 0, 0]} 
+              // // rotation={[0, Math.PI / 2, 0]} 
+              // rotation={[0, 0, Math.PI / 2]}
               rotation={[Math.PI * 0.28, Math.PI * 0.21, Math.PI * -.23]} 
-              scale={[1, .5, 1]} 
-              
+              scale={[1, .5, 1]}
             />
           );
         }

@@ -24,7 +24,7 @@ const CursorLight: React.FC = () => {
   useFrame(() => {
     if (lightRef.current) {
       const vector = new Vector3(mouse.x, mouse.y, 0.85).unproject(camera);
-      lightRef.current.position.lerp(vector, 0.1); // Smooth transition
+      lightRef.current.position.lerp(vector, 0.3); // Smooth transition
     }
   });
 
@@ -40,8 +40,6 @@ const CursorLight: React.FC = () => {
         shadow-bias={-0.0001}
         position={[0, 2, 5]} // Initial position
       />
-      {/* Optional: Visualize the light source */}
-      {/* <pointLightHelper args={[lightRef.current, 0.1, "red"]} /> */}
     </>
   );
 };
