@@ -30,7 +30,7 @@ const CursorLight: React.FC = () => {
 
   return (
     <>
-      <pointLight
+      {/* <pointLight
         ref={lightRef}
         castShadow
         intensity={1}
@@ -39,6 +39,16 @@ const CursorLight: React.FC = () => {
         shadow-mapSize-height={1024}
         shadow-bias={-0.0001}
         position={[0, 2, 5]} // Initial position
+      /> */}
+      <pointLight
+        ref={lightRef}
+        castShadow
+        intensity={0.5} // Lower the intensity to minimize shadow impact
+        distance={9999}
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
+        shadow-bias={-0.0001}
+        position={[0, 2, 5]} // Keep this at a static position for consistency
       />
     </>
   );
