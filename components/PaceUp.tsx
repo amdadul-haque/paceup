@@ -31,11 +31,7 @@ export function PaceUp(props: PaceUpProps) {
               geometry={node.geometry}
               material={material}
               rotation={[Math.PI * 0.34, Math.PI * 0.15, Math.PI * -0.26]}
-              // rotation={[Math.PI * 0.27, Math.PI * 0.21, Math.PI * -0.23]}
-              // rotation={[Math.PI * 0.15, Math.PI * 0.1, 0]} works little
-              // rotation={[Math.PI * 0.1, Math.PI * 0.05, 0]}
-              // rotation={[Math.PI * 0.05, Math.PI * 0.02, 0]}
-              scale={[1, 0.2, 1]}
+              scale={[1, 0.1, 1]}
             />
           );
         }
