@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import ThreeScene from '@/components/ThreeScene';
 
-const ThreeScene = dynamic(() => import('../components/ThreeScene'), { ssr: false });
 
 const HomePage: React.FC = () => {
   return (
