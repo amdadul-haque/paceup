@@ -23,7 +23,7 @@ const CursorLight: React.FC = () => {
   // Update light position based on mouse
   useFrame(() => {
     if (lightRef.current) {
-      const vector = new Vector3(mouse.x, mouse.y, 0.5).unproject(camera);
+      const vector = new Vector3(mouse.x, mouse.y, 0.9).unproject(camera);
       lightRef.current.position.lerp(vector, 0.3); // Smooth transition
     }
   });
